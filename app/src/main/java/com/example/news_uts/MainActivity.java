@@ -64,10 +64,8 @@ public class MainActivity extends AppCompatActivity {
         if (umurUser >= 18 ) {
             filterUmur = "all";
         }else {
-            filterUmur = "child";
+            filterUmur = "kids";
         }
-
-
 
         recyclerViewLayoutManager = new LinearLayoutManager(this);
         //newsAdapter = new NewsAdapter(data);
@@ -77,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
 //        recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
         tampildata();
+
     }
+
 
     private void tampildata() {
         mDatabaseReference.child("News").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -87,8 +87,21 @@ public class MainActivity extends AppCompatActivity {
                 data = new ArrayList<>();
                 for (DataSnapshot item : snapshot.getChildren()){
                     News dataBerita = item.getValue(News.class);
-                    dataBerita.setKey(item.getKey());
-                    data.add(dataBerita);
+
+                    // filter kategori
+                    if (dataBerita.getKategori().equals(kat)) {
+                        if (filterUmur.equals("all")){
+                            // filter umur
+                            dataBerita.setKey(item.getKey());
+                            data.add(dataBerita);
+                        }else {
+                            if (dataBerita.getUmur().equals("kids")){
+                                dataBerita.setKey(item.getKey());
+                                data.add(dataBerita);
+                            }
+                        }
+                    }
+
                 }
 
                 newsAdapter = new NewsAdapter(data, MainActivity.this, filterUmur, kat);

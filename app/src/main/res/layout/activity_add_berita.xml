@@ -62,7 +62,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tidak untuk anak"
+            android:text="Untuk anak"
             android:textColor="@color/purple_500"
             android:id="@+id/tdk_anak"/>
 

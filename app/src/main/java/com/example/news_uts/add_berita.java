@@ -58,7 +58,7 @@ public class add_berita extends AppCompatActivity {
         utkAnak.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                filter = "child";
+                filter = "kids";
             }
         });
 
@@ -118,5 +118,6 @@ public class add_berita extends AppCompatActivity {
 
         mDatabaseReference.push().setValue(newNews);
         Toast.makeText(this, "Successfilly insert data!", Toast.LENGTH_SHORT).show();
+        finish();
     }
 }
