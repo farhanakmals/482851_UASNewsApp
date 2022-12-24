@@ -35,9 +35,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView judul;
-        TextView desc;
-        TextView author;
+        TextView judul, desc, author, edit, delete;
+        String key;
         CardView card_hasil;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -46,6 +45,22 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             desc = itemView.findViewById(R.id.desc);
             author = itemView.findViewById(R.id.author);
             card_hasil = itemView.findViewById(R.id.card_hasil);
+            edit = itemView.findViewById(R.id.edit_berita);
+            delete = itemView.findViewById(R.id.delete_berita);
+
+            edit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(activity.getApplicationContext(), "edit", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            delete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(activity.getApplicationContext(), "delete", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 
