@@ -50,11 +50,12 @@ public class Register extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (regName.getText().length() > 0 && regEmail.getText().length() > 0
                         && regPass.getText().length() > 0 && regConfPass.getText().length() > 0) {
-
+                    String username =regEmail.getText().toString() + "@mail.com";
                     if (regPass.getText().toString().equals(regConfPass.getText().toString())){
-                        register(regName.getText().toString(), regEmail.getText().toString() + "@mail.com",
+                        register(regName.getText().toString(), username,
                                 regPass.getText().toString(), regConfPass.getText().toString());
                     }else {
                         Toast.makeText(getApplicationContext(), "Password yang anda masukan berbeda", Toast.LENGTH_SHORT).show();

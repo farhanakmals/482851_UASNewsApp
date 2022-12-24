@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
                 progressDialog.show();
                 String username = email.getText().toString() + "@mail.com";
                 if (email.getText().length() > 0 && password.getText().length() > 0){
-                    login(email.getText().toString(), password.getText().toString());
+                    login(username, password.getText().toString());
                 }else {
                     Toast.makeText(getApplicationContext(), "Isi email dan password anda", Toast.LENGTH_SHORT).show();
                 }

@@ -5,10 +5,8 @@ public class News {
     String desc;
     String umur;
     String kategori;
-    String bookmark;
     String author;
     String key;
-    int like;
 
     public News(String judul, String desc, String author) {
         this.judul = judul;
@@ -69,19 +67,4 @@ public class News {
         this.kategori = kategori;
     }
 
-    public String getBookmark() {
-        return bookmark;
-    }
-
-    public void setBookmark(String bookmark) {
-        this.bookmark = bookmark;
-    }
-
-    public int getLike() {
-        return like;
-    }
-
-    public void setLike(int like) {
-        this.like = like;
-    }
 }

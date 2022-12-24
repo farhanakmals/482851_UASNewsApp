@@ -107,21 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 newsAdapter = new NewsAdapter(data, MainActivity.this, filterUmur, kat);
                 recyclerView.setAdapter(newsAdapter);
 
-
-                //kategori berita
-
-//                for(int i = 0; i < dataBerita.judul.length(); i++){
-//                    if(filterUmur.equals(dataBerita.umur)) {
-//                        if(NewsData.kategori[i].equals(kat)){
-//                            data.add(new News(
-//                                    NewsData.judul[i],
-//                                    NewsData.description[i],
-//                                    NewsData.umur[i],
-//                                    NewsData.kategori[i],
-//                                    ));
-//                        }
-//                    }
-//                }
             }
 
             @Override

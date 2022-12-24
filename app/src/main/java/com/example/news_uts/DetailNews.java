@@ -23,6 +23,8 @@ public class DetailNews extends AppCompatActivity {
         TextView desc = findViewById(R.id.deskripsi);
         TextView penulis = findViewById(R.id.by_author);
 
+        TextView bookmark = findViewById(R.id.bookmark);
+
         title.setText(txtTitle);
         desc.setText(deskripsi);
         penulis.setText("by " + author);

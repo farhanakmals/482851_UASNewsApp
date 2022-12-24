@@ -26,7 +26,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     private List<News> mlist;
     private Activity activity;
     String filter, kat;
-    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
     public NewsAdapter (List<News> mlist, Activity activity, String filter, String kat){
         this.mlist = mlist;
@@ -50,10 +49,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         }
     }
 
-//    NewsAdapter(ArrayList<News>mlist) {
-//        this.mlist = mlist;
-//    }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -70,11 +65,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
         TextView desc =  holder.desc;
         TextView author = holder.author;
 
-//        if (filter.equals(mlist.get(position).getUmur())){
-//            if (kat.equals(mlist.get(position).getKategori())){
-//
-//            }
-//        }
         judul.setText(mlist.get(position).getJudul());
         desc.setText(mlist.get(position).getDesc());
         author.setText("by " + mlist.get(position).getAuthor());
