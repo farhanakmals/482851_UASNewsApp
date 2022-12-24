@@ -5,14 +5,36 @@ public class News {
     String desc;
     String umur;
     String kategori;
-    int image;
+    String bookmark;
+    String author;
+    String key;
+    int like;
 
-    public News(String judul, String description, int image, String kategori, String umur) {
+    public News(String judul, String desc, String author) {
         this.judul = judul;
-        this.desc = description;
-        this.umur = umur;
-        this.kategori = kategori;
-        this.image = image;
+        this.desc = desc;
+        this.author = author;
+    }
+
+    public News() {
+
+    }
+
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     public String getJudul() {
@@ -23,12 +45,12 @@ public class News {
         this.judul = judul;
     }
 
-    public String getDescription() {
+    public String getDesc() {
         return desc;
     }
 
-    public void setDescription(String description) {
-        this.desc = description;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 
     public String getUmur() {
@@ -47,11 +69,19 @@ public class News {
         this.kategori = kategori;
     }
 
-    public int getImage() {
-        return image;
+    public String getBookmark() {
+        return bookmark;
     }
 
-    public void setImage(int image) {
-        this.image = image;
+    public void setBookmark(String bookmark) {
+        this.bookmark = bookmark;
+    }
+
+    public int getLike() {
+        return like;
+    }
+
+    public void setLike(int like) {
+        this.like = like;
     }
 }

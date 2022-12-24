@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_berita"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Berita"
+        android:textColor="@color/purple_500"
+        android:textSize="30sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Judul Berita"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/cobaborder"
+        android:id="@+id/add_judul"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Isi berita"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/cobaborder"
+        android:id="@+id/add_berita"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="30dp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/cobaborder"
+        android:padding="20sp"
+        android:id="@+id/list_kategori"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semua umur"
+            android:textColor="@color/purple_500"
+            android:id="@+id/semua_umur"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak untuk anak"
+            android:textColor="@color/purple_500"
+            android:id="@+id/tdk_anak"/>
+
+    </RadioGroup>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah Berita"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_save"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batal"
+        android:textSize="18sp"
+        android:textColor="@color/purple_500"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_batal"/>
+
+</LinearLayout>

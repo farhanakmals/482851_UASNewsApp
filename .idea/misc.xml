@@ -3,10 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Farhan/AndroidStudio/News/app/src/main/res/drawable/ic_add.xml" value="0.1205" />
+        <entry key="..\:/Farhan/AndroidStudio/News/app/src/main/res/layout/activity_add_berita.xml" value="0.1" />
+        <entry key="..\:/Farhan/AndroidStudio/News/app/src/main/res/layout/activity_detail_news.xml" value="0.2" />
+        <entry key="..\:/Farhan/AndroidStudio/News/app/src/main/res/layout/activity_login.xml" value="0.22" />
+        <entry key="..\:/Farhan/AndroidStudio/News/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Farhan/AndroidStudio/News/app/src/main/res/layout/activity_register.xml" value="0.2" />
+        <entry key="..\:/Farhan/AndroidStudio/News/app/src/main/res/layout/activity_user_detail.xml" value="0.2" />
+        <entry key="..\:/Farhan/AndroidStudio/News/app/src/main/res/layout/list_item.xml" value="0.14583333333333334" />
         <entry key="..\:/Farhan/AndroidStudio/News_UTS/app/src/main/res/drawable/border.xml" value="0.1225" />
         <entry key="..\:/Farhan/AndroidStudio/News_UTS/app/src/main/res/drawable/cobaborder.xml" value="0.119" />
         <entry key="..\:/Farhan/AndroidStudio/News_UTS/app/src/main/res/layout/activity_detail_news.xml" value="0.2" />
-        <entry key="..\:/Farhan/AndroidStudio/News_UTS/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Farhan/AndroidStudio/News_UTS/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Farhan/AndroidStudio/News_UTS/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Farhan/AndroidStudio/News_UTS/app/src/main/res/layout/activity_user_detail.xml" value="0.1859375" />
         <entry key="..\:/Farhan/AndroidStudio/News_UTS/app/src/main/res/layout/list_item.xml" value="0.2" />

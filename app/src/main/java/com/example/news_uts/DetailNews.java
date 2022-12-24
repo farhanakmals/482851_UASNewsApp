@@ -16,15 +16,16 @@ public class DetailNews extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String txtTitle = bundle.getString("title");
         String deskripsi = bundle.getString("desc");
-        int img_photo = bundle.getInt("picture");
+        String author = bundle.getString("author");
+
 
         TextView title = findViewById(R.id.title);
         TextView desc = findViewById(R.id.deskripsi);
-        ImageView img = findViewById(R.id.image);
+        TextView penulis = findViewById(R.id.by_author);
 
-       title.setText(txtTitle);
+        title.setText(txtTitle);
         desc.setText(deskripsi);
-        img.setImageResource(img_photo);
+        penulis.setText("by " + author);
 
     }
 }

@@ -13,17 +13,42 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class user_detail extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    EditText tgl_lahir;
-    String spinnerText;
-    Button btn_cariberita;
-    Spinner spinner;
+    private EditText tgl_lahir;
+    private String spinnerText;
+    private Button btn_cariberita, btn_logout;
+    private Spinner spinner;
+    private TextView greet;
+
+    private FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_detail);
+
+        //firebase
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        //greet
+        greet = findViewById(R.id.greet);
+        greet.setText("Hello " + firebaseUser.getDisplayName());
+
+        //logout
+        btn_logout = findViewById(R.id.btn_logout);
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent signout = new Intent(getApplicationContext(), Login.class);
+                startActivity(signout);
+                finish();
+            }
+        });
 
         //Button Cari Berita
         btn_cariberita = findViewById(R.id.btn_cariBerita);
